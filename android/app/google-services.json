@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "960274824527",
+    "project_id": "face-158f4",
+    "storage_bucket": "face-158f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960274824527:android:25f006867230a91372993a",
+        "android_client_info": {
+          "package_name": "com.example.attend_sense"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxoVST_g8Pju14SST2YIrelaA5EKS6ueM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

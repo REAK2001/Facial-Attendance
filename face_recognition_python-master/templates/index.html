@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Recognition</title>
+</head>
+<body>
+    <form id="recognitionForm">
+        <label for="url1">URL of Image 1:</label>
+        <input type="text" id="url1" name="url1"><br><br>
+        <label for="url2">URL of Image 2:</label>
+        <input type="text" id="url2" name="url2"><br><br>
+        <input type="button" value="Recognize" onclick="recognize()">
+    </form>
+
+    <div id="result"></div>
+
+    <script>
+        function recognize() {
+            var form = document.getElementById("recognitionForm");
+            var formData = new FormData(form);
+
+            fetch('/recognize', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("result").innerHTML = JSON.stringify(data);
+            })
+            .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
